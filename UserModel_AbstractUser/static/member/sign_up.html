@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Member | Amalia{% endblock title %}
+{% block section %}
+
+<h2 class="chapter"><i class="fas fa-align-left"></i>사용자 등록</h2>
+<form action="" method="post">
+{% csrf_token %}
+
+<div class="con_box">
+    <table class="sign_box">
+        {{form.as_table}}
+    </table>
+    <div class="error_box">
+        {{ form.errors.as_ul }}
+    </div>
+    
+</div>
+<div class="btn_box">
+    <button class="btn_right">Sign UP</button>
+</div>
+</form>
+
+{% endblock section %}
